@@ -1,5 +1,5 @@
 import {RequestHandler} from "express";
-import {APIError} from "../../../models/messages";
+import {APIError} from "../../../error-handling/messages";
 
 export const apiValidation: RequestHandler = (req, res, next) => {
     if (req.header('Accept') !== 'application/json' || req.header('Content-Type') !== 'application/json') {

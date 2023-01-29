@@ -1,7 +1,7 @@
 import {RequestHandler} from "express";
 import {JediService} from "../../../services/jedi.service";
 import {Film, Species} from "../../../interfaces";
-import {APIError} from "../../../models/messages";
+import {APIError} from "../../../error-handling/messages";
 
 export const speciesClassificationByFilm: RequestHandler = async (req, res, next) => {
     let species: any = [];

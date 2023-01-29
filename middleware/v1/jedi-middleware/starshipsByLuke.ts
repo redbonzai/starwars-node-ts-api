@@ -1,7 +1,7 @@
 import {RequestHandler} from "express";
 import {Character, Starship} from "../../../interfaces";
 import {JediService} from "../../../services/jedi.service";
-import {APIError} from "../../../models/messages";
+import {APIError} from "../../../error-handling/messages";
 
 export const starshipsByLuke: RequestHandler = async (req, res, next) => {
     let starships: any = [];
