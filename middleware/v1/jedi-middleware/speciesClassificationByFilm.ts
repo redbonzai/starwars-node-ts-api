@@ -3,12 +3,12 @@ import {JediService} from "../../../services/jedi.service";
 import {Film, Species} from "../../../interfaces";
 import {APIError} from "../../../models/messages";
 
-export const speciesClassificationByFilm: RequestHandler = (req, res, next) => {
+export const speciesClassificationByFilm: RequestHandler = async (req, res, next) => {
     let species: any = [];
     const jedi = new JediService()
     const filmId: number = parseInt(req.params.id, 10)
 
-    jedi.starwarsEpisodeByNumber(filmId).then((film: Film) => {
+    await jedi.starwarsEpisodeByNumber(filmId).then((film: Film) => {
         species = jedi.classifyFilmSpecies(film.species).then((species: Species[]) => {
             film.species = species;
             return res.status(200).json({data: {film}})

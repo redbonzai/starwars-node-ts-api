@@ -3,12 +3,12 @@ import {Character, Starship} from "../../../interfaces";
 import {JediService} from "../../../services/jedi.service";
 import {APIError} from "../../../models/messages";
 
-export const starshipsByLuke: RequestHandler = (req, res, next) => {
+export const starshipsByLuke: RequestHandler = async (req, res, next) => {
     let starships: any = [];
     const jedi = new JediService()
     const characterId: number = parseInt(req.params.id, 10)
 
-    jedi.characterById(characterId).then((luke: Character) => {
+    await jedi.characterById(characterId).then((luke: Character) => {
         starships = jedi.getStarships(luke.starships).then((starships: Starship[]) => {
             luke.starships = starships;
             res.status(200).json({

@@ -15,9 +15,4 @@ pool.on('connect', () => {
     console.log('connected to the database');
 });
 
-// pool.query('select * from addresses', (err, res) => {
-//     if (err) throw err;
-//     console.log(res.rows);
-// });
-
 server.listen(port, () => console.log(`Server listening on port ${port}`));

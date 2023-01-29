@@ -88,7 +88,7 @@ export class JediService {
         })
     }
 
-    public async galaxyPlanetPopulation(): Promise<{ total_planets: number; global_population: string }> {
+    public async galaxyPlanetPopulation(): Promise<GalaxyData> {
         let pageNumber: number = 1;
         let planetsCount: number = 0;
         let galaxyPopulation: number = 0;
@@ -109,7 +109,7 @@ export class JediService {
 
         return {
             total_planets: planetsCount,
-            global_population: new Intl.NumberFormat('en-US', {maximumSignificantDigits: 3}).format(galaxyPopulation),
+            global_galaxy_population: new Intl.NumberFormat('en-US', {maximumSignificantDigits: 3}).format(galaxyPopulation),
         }
     }
 }

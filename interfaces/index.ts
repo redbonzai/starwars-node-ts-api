@@ -51,5 +51,5 @@ export interface Species {
 
 export interface GalaxyData {
     total_planets: number;
-    global_population: number;
+    global_galaxy_population: string;
 }
