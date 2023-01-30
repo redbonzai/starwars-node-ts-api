@@ -4,6 +4,11 @@
  ```terminal
     npm install
  ```
+
+## CREATE ENV FILE:
+```terminal
+    cp .env.example .env
+```
 ## START THE API:
  ```terminal
     npm start
