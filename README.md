@@ -1,5 +1,6 @@
 # TYPESCRIPT STAR WARS API IMPLEMENTATION
 
+
 ## INSTALLATION:
  ```terminal
     npm install
@@ -9,6 +10,17 @@
 ```terminal
     cp .env.example .env
 ```
+
+## CREATE THE FOLLOWING DIRECTORIES:
+```terminal
+    mkdir unitTestReports
+    mkdir .nyc_output
+```
+> create the following empty file inside the unitTestReports directory:
+```terminal
+    touch unitTestReports/junitresults.xml
+``` 
+
 ## START THE API:
  ```terminal
     npm start
