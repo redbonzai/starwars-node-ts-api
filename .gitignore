@@ -2,3 +2,5 @@ node_modules
 .idea
 build
 .env
+unitTestReports
+.nyc_output
