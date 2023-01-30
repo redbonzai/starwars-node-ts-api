@@ -1,0 +1,18 @@
+{
+  "spec_dir": "test",
+  "spec_files": [
+    "services/*.ts"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false,
+  "reporters": [
+    {
+      "name": "jasmine-spec-reporter#SpecReporter",
+      "options": { "displayStacktrace": "all" }
+    },
+    {
+      "name": "jasmine-reporters#JUnitXmlReporter",
+      "options": { "savePath": "./unitTestReports/", "consolidateAll": true }
+    }
+  ]
+}
