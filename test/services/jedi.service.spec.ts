@@ -337,7 +337,6 @@ describe('JediService TESTS', () => {
         });
 
         axios.get(url).then(response => {
-            console.log('response', response.data.data.luke.starships.length);
             expect(response.data.data.luke.starships.length).toBe(2);
         })
 
