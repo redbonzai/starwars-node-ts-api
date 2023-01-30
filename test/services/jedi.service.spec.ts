@@ -310,7 +310,10 @@ const phantomMenaceSpeciesSuccessResponse: any ={
     }
 }
 const planetSuccessResponse: any = {
-
+    "data": {
+        "total_planets": 60,
+        "global_galaxy_population": "149,000,000,000"
+    }
 }
 
 describe('JediService TESTS', () => {
