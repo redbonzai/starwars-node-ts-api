@@ -3,10 +3,6 @@ import moxios from 'moxios';
 import sinon from "sinon";
 import {JediService} from "../../services/jedi.service";
 
-import * as constants from "constants";
-import {jediUrlById} from "../../integrations/swapi/constants";
-
-
 let jediService: JediService;
 
 const successfulStarshipsResponse: any = {
