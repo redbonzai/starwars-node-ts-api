@@ -109,7 +109,9 @@ export class JediService {
 
         return {
             total_planets: planetsCount,
-            global_galaxy_population: new Intl.NumberFormat('en-US', {maximumSignificantDigits: 3}).format(galaxyPopulation),
+            global_galaxy_population: new Intl.NumberFormat(
+                'en-US', {maximumSignificantDigits: 3}
+            ).format(galaxyPopulation),
         }
     }
 }
