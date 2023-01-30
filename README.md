@@ -4,6 +4,11 @@
  ```terminal
     npm install
  ```
+
+## CREATE ENV FILE:
+```terminal
+    cp .env.example .env
+```
 ## START THE API:
  ```terminal
     npm start
@@ -19,10 +24,7 @@ the link is here: [star wars implementation Postman Collection](https://api.post
 > to build my own PostgreSQL Star Wars API, and add to it.  I didn't do that, but I created the following to show the intent: 
 ### Created a database implementation on the api
 ```typescript
-    // database.ts
     import { Pool } from 'pg';
-    import { config } from 'dotenv';
-    config();
 
     const pool = new Pool({
         user: process.env.DB_USER,
@@ -34,7 +36,7 @@ the link is here: [star wars implementation Postman Collection](https://api.post
 
     export default pool;
 ```
-### There is a doceker-compose.yml configuration for a postgreSQL database.
+### There is a docker-compose.yml configuration for a postgreSQL database.
 ### There is also A Dockerfile. 
 > Both of these work, but they are not fully implemented due to time. . 
 
