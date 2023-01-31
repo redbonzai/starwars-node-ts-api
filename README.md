@@ -35,6 +35,10 @@ the link is here: [star wars implementation Postman Collection](https://api.post
 > If I would have had more time I would have implemented a database to store the data when it is queried so as
 > to build my own PostgreSQL Star Wars API, and add to it.  I didn't do that, but I created the following to show the intent: 
 ### Created a database implementation on the api
+>The database connection is intended to be used with a ETL process that is not yet built. 
+> Also, there is an ORM ( TypeOrm ) that will be part of this process. 
+> The intention here: ONce the data model is built, then as an automated ETL process, check that a row doesn't exist, and persist.
+
 ```typescript
     import { Pool } from 'pg';
 
@@ -56,6 +60,9 @@ the link is here: [star wars implementation Postman Collection](https://api.post
  ```terminal 
 docker compose up -d
 ```
+
+Currently, one can either run the application on the api container, or can run it locally with npm start. 
+The process is virtually the same.  In either case `NPM START` is executed, either on the local command line, or in a docker container.
 
 >Thus, if I would have had more time, this would have been a dynamic data-driven api.
 >### I created some middleware files that handle the following scenarios: 

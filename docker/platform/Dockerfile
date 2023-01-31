@@ -3,8 +3,8 @@ RUN mkdir -p /opt/app
 WORKDIR /opt/app
 RUN adduser -S api-user
 COPY . /opt/app
-RUN npm install
 RUN chown -R api-user /opt/app
 USER api-user
+RUN npm install
 EXPOSE 4200
 CMD ["npm", "start"]
