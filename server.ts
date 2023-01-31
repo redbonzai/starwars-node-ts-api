@@ -2,7 +2,7 @@ require('dotenv').config();
 
 import express from 'express';
 import { pool} from "./database/database";
-import {v1Router} from "./middleware/v1/v1Router";
+import {v1Router} from "./src/middleware/v1/v1Router";
 
 const server = express();
 const port: number = parseInt(process.env.SERVER_PORT || '4200');

@@ -1,7 +1,7 @@
 import axios from "axios";
 import moxios from 'moxios';
 import sinon from "sinon";
-import {JediService} from "../../services/jedi.service";
+import {JediService} from "../../src/services/jedi.service";
 
 let jediService: JediService;
 
