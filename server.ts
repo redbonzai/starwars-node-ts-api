@@ -9,7 +9,7 @@ const port: number = parseInt(process.env.SERVER_PORT || '4200');
 
 server.disable('x-powered-by')
 
-server.use('/v1', v1Router);
+server.use('/v1/', v1Router);
 
 pool.on('connect', () => {
     console.log('connected to the database');
