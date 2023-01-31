@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 import express from 'express';
-import { pool} from "./database/database";
+import {pool} from "./database/database";
 import {v1Router} from "./middleware/v1/v1Router";
 
 const server = express();

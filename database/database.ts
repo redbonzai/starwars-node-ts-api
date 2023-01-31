@@ -1,6 +1,5 @@
 import {Pool} from "pg";
 const port:number = parseInt(process.env.DB_PORT || '5432');
-
 export const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -9,9 +8,8 @@ export const pool = new Pool({
     port: port
 })
 
-// pool.connect().then(client => {
-//     client.query('SELECT * FROM addresses', (err, res) => {
-//         console.log(err, res)
-//         client.release()
-//     })
-// })
+const sync = true;
+
+pool.connect().then(client => {
+    console.log('connected to the database:: max clients in the pool: ', client.getMaxListeners());
+})

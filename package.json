@@ -22,7 +22,8 @@
   "scripts": {
     "start-server": "tsc && node build/server.js || exit 1",
     "start": "nodemon -e ts -w ./ -x npm run start-server || exit 1",
-    "test": "nyc --silent jasmine-ts --config=./jasmine.json"
+    "test": "nyc --silent jasmine-ts --config=./jasmine.json",
+    "model-generate": "sequelize-cli model:generate --name "
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.4",
     "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -44,6 +47,7 @@
     "@types/morgan": "^1.9.3",
     "@types/moxios": "^0.4.15",
     "@types/multer": "^1.4.7",
+    "@types/node": "^18.11.18",
     "@types/pg": "^8.6.5",
     "@types/sinon": "^10.0.13",
     "@types/uuid": "^8.3.4",
@@ -54,7 +58,9 @@
     "moxios": "^0.4.0",
     "nodemon": "^2.0.15",
     "nyc": "^14.1.1",
+    "sequelize-cli": "^6.6.0",
     "sinon": "^15.0.1",
+    "sqlite3": "^5.1.4",
     "ts-node": "^3.3.0",
     "typescript": "^4.6.3"
   }
