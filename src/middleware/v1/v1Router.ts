@@ -4,7 +4,6 @@ import {apiValidation} from "./general/apiValidation";
 import {apiCors} from "./general/cors";
 import {errorHandler} from "./general/errorHandling";
 
-// import {peopleRouter} from "../../routing/sw-people";
 import {jediRouter} from "../../routing/jedi-routes";
 
 export let v1Router = Router();
